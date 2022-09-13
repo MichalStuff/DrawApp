@@ -89,7 +89,6 @@ colorPiker.addEventListener('change', () => {
 const undo = document.querySelector('.tools__action__undo');
 
 undo.addEventListener('click', () => {
-    console.log(imageArray)
     if (imageArray.length < 2) return;
     imageArray.pop();
     IMAGE.src = imageArray[imageArray.length - 1];
@@ -146,7 +145,6 @@ function stopPosition() {
     let canvasImage = canvas.toDataURL();
     IMAGE.src = canvasImage;
     updateImageArray(canvasImage);
-    console.log(imageArray);
 }
 
 pen.addEventListener('click', () => {
