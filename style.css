@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    border-bottom: 2px solid black;
+}
+
+.tools__action{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tools__action__clear{
+    width: 50px;
+    height: 50px;
+    background-image: url(clear.png);
+    background-size: cover;
+    margin: 20px;
+}
+
+.tools__action__undo{
+    width: 50px;
+    height: 50px;
+    background-image: url(undo.png);
+    background-size: cover;
+}
+
+.tools__lineWidth{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.tools__lineWidth__slider{
+    background-color: black;
+}
+
+.tools__lineWidth__label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.tools__color{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools__color__label{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tools__color__piker{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+}
+
+.tools__color__piker::-webkit-color-swatch{
+    border-radius: 15px;
+    border:2px solid black;
+}
+
+.tools__shapes{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.tools__shapes__label{
+    text-align: center;
+}
+
+.tools__shapes__wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.tools__shapes__shape{
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    background-color: transparent;
+    margin: 10px;
+}
+
+.tools__shapes__pen{
+    background-image: url(pen.png);
+    background-size:cover;
+}
+
+.tools__shapes__ellipse{
+    border-radius: 50%;
+}
+
+.icon{
+    display: none;
+}
+
+.--selected{
+    border: 3px solid black;
+}
+
+#canvas{
+    cursor: url(pencil.png), auto;
+}
+
+.--hide{
+    top: -100px;
+    left: 0;
+    justify-content: center;
+}
+
+.--show{
+    top: 0;
+}
+
+.--up{
+    transform: rotate(180deg);
+}
+
+
+@media (max-width : 736px){
+    .tools{
+        position: absolute;
+        transition: 0.4s;
+        background-color: transparent;
+    }
+    .tools__lineWidth{
+        margin: 5px;
+    }
+    .tools__lineWidth__label{
+        font-size: 16px;
+    }
+    .tools__lineWidth__slider{
+        width: 80px;
+    }
+    .tools__color{
+        max-width: 91px;
+    }
+    .tools__color__label{
+        font-size: 16px;
+    }
+    .tools__color__piker{
+        width: 40px;
+        height: 40px;
+    }
+    .tools__shapes{
+        margin: 5px;
+    }
+    .tools__shapes__label{
+        font-size: 16px;
+    }
+    .tools__shapes__shape{
+        margin: 5px;
+    }
+    .tools__action{
+        flex-direction: column;
+    }
+    .tools__action__clear{
+        margin: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    .tools__action__undo{
+        width: 30px;
+        height: 30px;
+    }
+    .icon{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+        margin: 5px;
+        background-image: url(arrow.png);
+        background-size: cover;
+        transition: 0.4s;
+    }
+}
+
+@media (max-width : 1024px) {
+    .tools{
+        position: absolute;
+        transition: 0.4s;
+        background-color: transparent;
+    }
+    .icon{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+        margin: 5px;
+        background-image: url(arrow.png);
+        background-size: cover;
+        transition: 0.4s;
+    }
+}

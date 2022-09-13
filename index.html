@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+        <div class="tools">
+            <div class="tools__action">
+                <div class="tools__action__clear"></div>
+                <div class="tools__action__undo"></div>
+            </div>
+            <div class="tools__lineWidth">
+                <input type="range" min="1" max="100" class="tools__lineWidth__slider">
+                <label class="tools__lineWidth__label">Size of pen : 1</label>
+            </div>
+            <div class="tools__color">
+                <label class="tools__color__label">Choose Color</label>
+                <input type="color" class="tools__color__piker">
+            </div>
+            <div class="tools__shapes">
+                <!-- <label class="tools__shapes__label">TOOL : PEN</label> -->
+                <div class="tools__shapes__wrapper">
+                    <div class="tools__shapes__shape tools__shapes__pen"></div>
+                    <div class="tools__shapes__shape tools__shapes__rectangle"></div>
+                    <div class="tools__shapes__shape tools__shapes__ellipse"></div>
+                </div>
+            </div>
+            <p class="icon"></p>
+        </div>
+        <canvas class="myCanvas" id="canvas" ></canvas>
+</body>
+</html>
